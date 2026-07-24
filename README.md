@@ -1,12 +1,12 @@
-# QuCat: Videojuego para democratizar la computación cuántica (QHack 2026)
+# QuCat 🐱: Videojuego para democratizar la computación cuántica (QHack 2026) ⚛️
 
 <img src="img/QuCatTitulo_transparente.png" style="height: 250px">
 
-## Problema Identificado
+## ❗ Problema Identificado
 
 Existe una falta de democratización en la computación cuánticas, especialmente para niños y estudiantes de secundaria con pocos recursos y con poco conocimiento previo en física o matemáticas. Esto reduce el interés en áreas de la ciencia y la tecnología.
 
-## Descripción de la solución
+## 💡 Descripción de la solución
 
 El producto de nuestro proyecto es el videojuego QuCat, una propuesta educativa diseñada para fomentar la democratización de la computación cuántica en un público joven, principalmente niños y adolescentes de secundaria, con bajos recursos y poco conocimiento sobre física y matemáticas.
 
@@ -16,7 +16,7 @@ A través de esta mecánica, el jugador aprende de forma visual e interactiva c�
 
 El sistema de juego está diseñado para reforzar estos conceptos de manera dinámica: el jugador obtiene 1 punto cuando logra colapsar al estado objetivo y pierde 1 punto si colapsa al estado contrario. Asimismo, gana cuando alcanza 5 puntos y pierde cuando llega a -5 puntos.
 
-## Estructura de proyecto
+## 📂 Estructura de proyecto
 
 ```text
 Grupo1-HackatonQhubWinterS/
@@ -50,7 +50,7 @@ Grupo1-HackatonQhubWinterS/
     └── game_over.mp3.mpeg
 ```
 
-## Requisitos
+## 🔧 Requisitos
 
 Este proyecto está desarrollado para ejecutarse con:
 
@@ -80,13 +80,13 @@ conda activate qucat
 pip install -r requirements.txt
 ```
 
-## Video Demo
+## 🎥 Video Demo
 
 ```text
 https://youtu.be/HgSh1QcNgJ8
 ```
 
-## Disclaimer
+## 📄 Disclaimer
 
 Duplicado del repositorio original usado para la Hackathon:
 ```text
