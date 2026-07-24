@@ -85,3 +85,10 @@ pip install -r requirements.txt
 ```text
 https://youtu.be/HgSh1QcNgJ8
 ```
+
+## Disclaimer
+
+Duplicado del repositorio original usado para la Hackathon:
+```text
+https://github.com/DarkSentinel24/Grupo1-HackatonQhubWinterS
+```
