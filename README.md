@@ -1,13 +1,6 @@
-# Grupo 1 - Hackaton QuantumHub Winter School
+# QuCat: Videojuego para democratizar la computación cuántica (QHack 2026)
 
-<img src="img/QuCatTitulo_transparente.png">
-
-## Integrantes
-
-- Piero Sayd Montero Marreros 
-- Adrian Alejandro Leon Ojeda
-- Andres Joshua Canahuire Taboada
-- Mathias Manuel Emilio Canales Diaz
+<img src="img/QuCatTitulo_transparente.png" style="height: 250px">
 
 ## Problema Identificado
 
