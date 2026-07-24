@@ -1,6 +1,6 @@
 # QuCat 🐱: Videojuego para democratizar la computación cuántica (QHack 2026) ⚛️
 
-<img src="img/QuCatTitulo_transparente.png" style="height: 250px">
+<img src="img/QuCatTitulo_transparente.png" style="height: 250px; display: block; margin: auto;">
 
 ## ❗ Problema Identificado
 
