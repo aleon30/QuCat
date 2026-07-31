@@ -1,4 +1,4 @@
-name: Desplegar QuCat en GitHub Pages
+name: Desplegar QUCat en GitHub Pages
 
 on:
   push:
@@ -26,15 +26,16 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Instalar Pygbag
+      - name: Instalar dependencias del sistema y Pygbag 0.9.1
         run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb
           python -m pip install --upgrade pip
-          pip install pygbag==0.8.6
+          pip install pygbag==0.9.1
 
       - name: Compilar el juego con Pygbag
         run: |
-          # Generar la versión estática
-          python -m pygbag --build --app_name index .
+          xvfb-run python -m pygbag --build --archive .
 
       - name: Crear archivo .nojekyll
         run: |
