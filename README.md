@@ -19,20 +19,12 @@ El sistema de juego está diseñado para reforzar estos conceptos de manera din�
 ## 📂 Estructura de proyecto
 
 ```text
-Grupo1-HackatonQhubWinterS/
-├── main.py                                  # Bucle principal del juego y flujo general
-├── superposicion.py                         # Lógica cuántica para aplicar compuertas y colapsar el qubit
-├── configuracion.py                         # Constantes globales del proyecto
-├── assets.py                                # Carga y limpieza de imágenes y sprites
-├── ui.py                                    # Funciones de interfaz y paneles del menú/instrucciones
-├── formato_qubit.py                         # Formateo del estado del qubit para mostrar amplitudes
-├── requirements.txt                         # Dependencias de Python del proyecto
-├── README.md                                # Documentación del proyecto
-├── LICENSE                                  # Licencia del repositorio
-├── .gitignore                               # Archivos ignorados por Git
+QuCat/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml                       # Flujo de CI/CD para desplegar automáticamente en GitHub Pages
 ├── .vscode/                                 # Configuración del entorno de VS Code
-│
-├── img/                                     # Activos gráficos del juego
+├── img/                                     # Activos gráficos del juego (transparencias PNG preparadas)
 │   ├── fondo.jpeg
 │   ├── suelo.jpeg
 │   ├── cat.png
@@ -41,44 +33,72 @@ Grupo1-HackatonQhubWinterS/
 │   ├── titulo_victoria.png
 │   ├── titulo_derrota.png
 │   └── compuerta_*.png / .jpeg              # Imágenes de las compuertas cuánticas
-│
-└── sfx/                                     # Sonidos del videojuego
-    ├── get_gate.mp3.mpeg
-    ├── pixel_jump_sound.mp3.mpeg
-    ├── medicion.mp3.mpeg
-    ├── victoria.mp3.mpeg
-    └── game_over.mp3.mpeg
+├── sfx/                                     # Efectos de sonido del videojuego
+│   ├── get_gate.mp3.mpeg
+│   ├── pixel_jump_sound.mp3.mpeg
+│   ├── medicion.mp3.mpeg
+│   ├── victoria.mp3.mpeg
+│   └── game_over.mp3.mpeg
+├── web/                                     # Plantilla web personalizada para Pygbag
+│   └── index.html                           # Estructura HTML5 y canvas ajustado a la pantalla
+├── main.py                                  # Bucle principal del juego y flujo general
+├── superposicion.py                         # Lógica cuántica para aplicar compuertas y colapsar el qubit
+├── configuracion.py                         # Constantes globales del proyecto
+├── assets.py                                # Carga y escalado optimizado de imágenes y sprites
+├── ui.py                                    # Funciones de interfaz y paneles del menú/instrucciones
+├── formato_qubit.py                         # Formateo del estado del qubit para mostrar amplitudes
+├── pygbag.ini                               # Configuración de compilación WebAssembly/Pygbag
+├── favicon.png                              # Ícono de la pestaña del navegador (logo de QuCat)
+├── requirements.txt                         # Dependencias de Python del proyecto
+├── README.md                                # Documentación del proyecto
+├── LICENSE                                  # Licencia del repositorio
+└── .gitignore                               # Archivos e historial de builds ignorados por Git
 ```
 
 ## 🔧 Requisitos
 
-Este proyecto está desarrollado para ejecutarse con:
+Este proyecto está desarrollado para ejecutarse localmente con:
 
 - Python 3.11
-- Conda (Miniconda o Anaconda)
+- Conda (Miniconda o Anaconda) o un entorno virtual de Python (`venv`)
 
 ### Dependencias principales
 
 | Librería | Versión recomendada | Uso dentro del proyecto |
 | --- | --- | --- |
-| `pygame` | `>= 2.5.0` | Renderizar la ventana del videojuego, manejar eventos, sonidos, sprites y la interfaz gráfica. |
+| `pygame` | `>= 2.5.0` | Renderizar la ventana del videojuego, manejar eventos, sonidos, sprites e interfaz gráfica. |
 | `qiskit` | `>= 1.0.0` | Modelar el comportamiento del qubit, aplicar compuertas cuánticas y simular el colapso de la medición. |
+| `pygbag` | `>= 0.9.1` | Empaquetar y compilar el juego Python/Pygame a WebAssembly (WASM) para la web. |
 
-### Instalación
+### Instalación local
 
-Se puede instalar el entorno con Conda o con `pip` usando el archivo `requirements.txt`:
+Puedes instalar el entorno con `pip` usando el archivo `requirements.txt`:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-O bien, con Conda:
+O creando un entorno dedicado en Conda:
 
-```bash
+```
 conda create -n qucat python=3.11
 conda activate qucat
 pip install -r requirements.txt
 ```
+
+## 🌐 Probar el juego en la Web
+
+¡No necesitas instalar nada para jugar! QuCat está desplegado en línea gracias a WebAssembly y GitHub Pages.
+
+👉 Juega QuCat en el siguiente link:
+
+```text
+https://aleon30.github.io/QuCat/
+```
+
+💡 Nota de ejecución:
+
+Al cargar la página por primera vez, haz un clic sobre la pantalla para inicializar el contexto de audio del navegador y dar comienzo al juego.
 
 ## 🎥 Video Demo
 
