@@ -1,4 +1,4 @@
-name: Desplegar QuCat en GitHub Pages
+name: Desplegar QUCat en GitHub Pages
 
 on:
   push:
@@ -26,7 +26,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Instalar Pygbag (Versión Estable 0.8.6)
+      - name: Instalar Pygbag
         run: |
           python -m pip install --upgrade pip
           pip install pygbag==0.8.6
@@ -34,6 +34,10 @@ jobs:
       - name: Compilar el juego con Pygbag
         run: |
           python -m pygbag --build .
+
+      - name: Crear archivo .nojekyll (Indispensable para GitHub Pages)
+        run: |
+          touch build/web/.nojekyll
 
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v4
