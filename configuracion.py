@@ -2,7 +2,8 @@ import pygame
 
 pygame.init()
 
-ANCHO, ALTO = 1200, 600
+ANCHO = 1200
+ALTO = 600
 PANTALLA = pygame.display.set_mode((ANCHO, ALTO))
 pygame.display.set_caption("QuCat")
 
