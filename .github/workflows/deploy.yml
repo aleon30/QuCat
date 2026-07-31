@@ -26,17 +26,14 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Instalar Pygbag y dependencias de sistema
+      - name: Instalar Pygbag (Versión Estable)
         run: |
-          sudo apt-get update
-          sudo apt-get install -y xvfb
           python -m pip install --upgrade pip
-          pip install pygbag
+          pip install pygbag==0.8.7
 
       - name: Compilar el juego con Pygbag
         run: |
-          # Usamos xvfb-run para proveer una pantalla virtual y evitar fallos en la config de Pygbag
-          xvfb-run python -m pygbag --build --archive .
+          python -m pygbag --build .
 
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v4
