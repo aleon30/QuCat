@@ -1,4 +1,4 @@
-name: Desplegar QUCat en GitHub Pages
+name: Desplegar QuCat en GitHub Pages
 
 on:
   push:
@@ -26,10 +26,10 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Instalar Pygbag (Versión Estable)
+      - name: Instalar Pygbag (Versión Estable 0.8.6)
         run: |
           python -m pip install --upgrade pip
-          pip install pygbag==0.8.7
+          pip install pygbag==0.8.6
 
       - name: Compilar el juego con Pygbag
         run: |
