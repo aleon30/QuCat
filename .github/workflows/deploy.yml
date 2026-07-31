@@ -1,4 +1,4 @@
-name: Desplegar QUCat en GitHub Pages
+name: Desplegar QuCat en GitHub Pages
 
 on:
   push:
@@ -33,9 +33,10 @@ jobs:
 
       - name: Compilar el juego con Pygbag
         run: |
-          python -m pygbag --build .
+          # Generar la versión estática
+          python -m pygbag --build --app_name index .
 
-      - name: Crear archivo .nojekyll (Indispensable para GitHub Pages)
+      - name: Crear archivo .nojekyll
         run: |
           touch build/web/.nojekyll
 
