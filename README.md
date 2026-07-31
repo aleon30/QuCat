@@ -24,6 +24,8 @@ QuCat/
 │   └── workflows/
 │       └── deploy.yml                       # Flujo de CI/CD para desplegar automáticamente en GitHub Pages
 ├── .vscode/                                 # Configuración del entorno de VS Code
+├── build/                                   # Salida generada por Pygbag con los archivos estáticos de la web
+│   └── web/
 ├── img/                                     # Activos gráficos del juego (transparencias PNG preparadas)
 │   ├── fondo.jpeg
 │   ├── suelo.jpeg
@@ -34,11 +36,11 @@ QuCat/
 │   ├── titulo_derrota.png
 │   └── compuerta_*.png / .jpeg              # Imágenes de las compuertas cuánticas
 ├── sfx/                                     # Efectos de sonido del videojuego
-│   ├── get_gate.mp3.mpeg
-│   ├── pixel_jump_sound.mp3.mpeg
-│   ├── medicion.mp3.mpeg
-│   ├── victoria.mp3.mpeg
-│   └── game_over.mp3.mpeg
+│   ├── get_gate.ogg
+│   ├── pixel_jump_sound.ogg
+│   ├── medicion.ogg
+│   ├── victoria.ogg
+│   └── game_over.ogg
 ├── web/                                     # Plantilla web personalizada para Pygbag
 │   └── index.html                           # Estructura HTML5 y canvas ajustado a la pantalla
 ├── main.py                                  # Bucle principal del juego y flujo general
@@ -60,7 +62,7 @@ QuCat/
 Este proyecto está desarrollado para ejecutarse localmente con:
 
 - Python 3.11
-- Conda (Miniconda o Anaconda) o un entorno virtual de Python (`venv`)
+- Conda (Miniconda o Anaconda)
 
 ### Dependencias principales
 
