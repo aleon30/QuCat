@@ -26,15 +26,17 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Instalar Pygbag
+      - name: Instalar Pygbag y dependencias de sistema
         run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb
           python -m pip install --upgrade pip
           pip install pygbag
 
       - name: Compilar el juego con Pygbag
         run: |
-          # Compila el juego en modo build (genera los archivos estáticos en build/web)
-          python -m pygbag --build .
+          # Usamos xvfb-run para proveer una pantalla virtual y evitar fallos en la config de Pygbag
+          xvfb-run python -m pygbag --build --archive .
 
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v4
@@ -42,7 +44,7 @@ jobs:
       - name: Subir artefacto para Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'build/web' # Sube directamente el contenido listo para la web
+          path: 'build/web'
 
       - name: Desplegar en GitHub Pages
         id: deployment
